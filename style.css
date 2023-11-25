@@ -15,6 +15,7 @@
     border: 2px solid black;
     border-radius: 10px;
     margin: 10px auto;
+    padding: 5px;
 }
 
 .buttons {
@@ -26,7 +27,6 @@
 .options {
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 10px;
 }
 
 .options button {
