@@ -1,7 +1,17 @@
 .calculator {
     display: flex;
+    flex-direction: column;
     width: 30%;
-    margin: 15% auto;
+    margin: 10% auto;
     border: 2px solid black;
     border-radius: 10px;
+}
+
+.display {
+    display: flex;
+    width: 90%;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 10px auto;
 }
