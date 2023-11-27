@@ -44,8 +44,6 @@ let evalExp = exp => {
     while(i < exp.length && (!isNaN(parseInt(exp[i])) || exp[i] == '.'))
         b = b + exp[i++];
 
-
-    console.log(exp);
     if(a == '') return operate(a, b, op);
     if(op == '') return a;
 
