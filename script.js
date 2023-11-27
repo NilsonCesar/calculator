@@ -1,6 +1,6 @@
 let buttons = document.querySelectorAll('button');
-let display = document.querySelector('.display');
-let mem = 0
+let display = document.querySelector('.actExpresion');
+let actResult = 0
 
 let getDisplayExp = () => display.textContent;
 let validArithmethic = (op) => {
@@ -14,9 +14,9 @@ let validArithmethic = (op) => {
 
     let lastOp = displayExp[lastIdx];
     return isNumber(lastOp);
-}
-let isNumber = op => op in ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
+};
 
+let isNumber = op => op in ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 let evalExp = (a, b, op) => {
     if(op == '+') return toString(parseFloat(a) + parseFloat(b));
@@ -27,12 +27,12 @@ let evalExp = (a, b, op) => {
         if(a == '') return toString(-1 * parseFloat(b));
         else return toString(parseFloat(a) - parseFloat(b));
     }
-}
+};
 
 function updateExp(op) {
     if(op == 'Clear') {
         display.textContent = '';
-        mem = 0;
+        actResult = 0;
     }
     if(op == 'Delete') {
         let exp = getDisplayExp();
@@ -48,8 +48,8 @@ function updateExp(op) {
     if (isNumber(getDisplayExp()[getDisplayExp().length - 1]) && op == '.') {
         display.textContent = display.textContent + op;
     }
-}
+};
 
 buttons.forEach(button => {
     button.addEventListener('click', () => updateExp(button.textContent));
-})
+});
